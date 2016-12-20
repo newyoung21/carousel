@@ -69,6 +69,7 @@ Carousel.prototype = {
 			display: 'table' 
 		});
 		this.lis.css({
+			width:(100/this.L)+'%',
 			display:'table-cell',
 			height:this.height
 		});

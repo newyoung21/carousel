@@ -22,7 +22,7 @@
 		width 传入轮播图的宽度，可选，默认为100%(满屏);
 		height 传入轮播图的高度，可选，默认自适应
 
-	####实例化	
+#### 实例化	
 		模拟了后台传过来的数据data(这里只有一个src属性);
 		var data =[{src:'banner01.jpg'},{src:'banner02.jpg'},{src:'banner03.jpg'}];
-		var car = new Carousel('.carousel',data,500,250);
+		var car = new Carousel('.carousel',data,960,300);
