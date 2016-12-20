@@ -30,9 +30,6 @@ a{
 	border-radius:10px;
 	background-color: red; 
 }
-.carousel{
-	text-align: center;
-}
 .active>a{
 	background-color: blue !important;
 }
