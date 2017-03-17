@@ -1,5 +1,6 @@
 # 轮播图插件
-### 这是一个用jQuery框架写的轮播图组件(不兼容ie6/7);只需在页面手动添加一个标签就可以
+### 这是一个用jQuery框架写的轮播图组件(不兼容ie6/7);
+只需在页面手动添加一个标签就可以
 
 ### 使用方法
 
@@ -26,3 +27,5 @@
 		模拟了后台传过来的数据data(这里只有一个src属性);
 		var data =[{src:'banner01.jpg'},{src:'banner02.jpg'},{src:'banner03.jpg'}];
 		var car = new Carousel('.carousel',data,960,300);
+
+### 展示效果 <a href="https://newyoung21.github.io/carousel/">狠狠的点击这里demo</a>
