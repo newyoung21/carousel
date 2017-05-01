@@ -1,20 +1,17 @@
 " use strict";
-//参数
-// containner 轮播图容器
-// data 轮播图数据对象
-// 数据模型
-// data =[{src:xxx.jpg//轮播图地址}]
-Carousel = function(container,data,width,height){
-	this.init(container,data,width,height);
+
+Carousel = function(car){
+	this.init(car);
 };
 Carousel.prototype = {
 	//初始化
-	init: function(container,data,width,height){
-		this.$c = $(container);
-		this.data = data;
+	init: function(car){
+		this.$c = $(car.container);
+		this.data = car.data;
 		this.L = this.data.length;
-		this.width = width || '';//没有传宽度值，默认给100%
-		this.height = height || 'auto';
+		this.width = car.width || '';//没有传宽度值，默认给100%
+		this.height = car.height || 'auto';
+		this.time = car.time;
 		this.createList();
 		this.playGo();
 	},
@@ -115,7 +112,7 @@ Carousel.prototype = {
 		var i = i || 1,
 			imgH = this.lis.width(),
 			me = this;
-		this.$ul.animate({left: -(i*imgH)},1000, function() {
+		this.$ul.animate({left: -(i*imgH)},me.time, function() {
 			//把第一个放到最后面
 			for(var k =0; k < i; k++){
 				$(this).find('li').last().after($(this).find('li').first());
@@ -136,7 +133,7 @@ Carousel.prototype = {
 		for(var k=0; k<i; k++){
 			this.$ul.find('li').first().before(this.$ul.find('li').last());
 		};
-		this.$ul.animate({left: 0},1000, 
+		this.$ul.animate({left: 0},me.time, 
 			function() {
 				var nb = $(this).find('li').first().attr('data-idx');
 				me.active(nb);
