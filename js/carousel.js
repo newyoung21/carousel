@@ -155,3 +155,6 @@ Carousel.prototype = {
 		this.round.removeClass('active').eq(nb).addClass('active');
 	}
 };
+window.carousel = function(obj){
+	return new Carousel(obj);
+}
