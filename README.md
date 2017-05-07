@@ -35,12 +35,17 @@
 #### 实例化	
 		模拟了后台传过来的数据data(这里只有一个src属性);
 		var data =[{src:'banner01.jpg'},{src:'banner02.jpg'},{src:'banner03.jpg'}];
-		var car = new Carousel({
-                           container:'.carousel',
-                           data: data,
-                           width: 960,
-                           height: 300,
-                           time: 500
-                });
+    var obj = { container:'.carousel',data: data,width: 960,height: 300,time: 500};
+		carousel(obj);
 
+## carousel2.js 是把 carousel 封装在Jquery框架上
+
+### jQuery 插件使用方法
+```
+    var obj = {data: data,width: 960,height: 300,time: 500};
+    
+    $('.coantainer').carousel(obj);
+
+    obj对象除了没有 container属性，其他属性跟上面一样
+```
 ### 展示效果 <a href="https://newyoung21.github.io/carousel/">狠狠的点击这里demo</a>
