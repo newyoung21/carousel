@@ -9,17 +9,17 @@
 	<div class="carousel">
 	</div>
 	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/carousel.js"></script>
+	<script src="js/carousel3.js"></script>
 	<script>
 		var data =[
-		{src:'banner01.jpg'},
-		{src:'banner02.jpg'},
-		{src:'banner03.jpg'},
-		{src:'banner04.jpg'},
-		{src:'banner05.jpg'}
+		{src:'banner01.jpg',href:'https://www.baidu.com/'},
+		{src:'banner02.jpg',href:'https://www.baidu.com/'},
+		{src:'banner03.jpg',href:'https://www.baidu.com/'},
+		{src:'banner04.jpg',href:'https://www.baidu.com/'},
+		{src:'banner05.jpg',href:'https://www.baidu.com/'}
 		];
 		var obj = { container:'.carousel',data: data,width: 960,height: 300,time: 500};
-		 carousel(obj);
+		$('.carousel').carousel(obj);
 	</script>
 </body>
 </html>

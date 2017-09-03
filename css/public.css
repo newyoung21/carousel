@@ -21,10 +21,10 @@ a{
 	display: inline-block;
 	*display:inline;
 	*zoom:1;
+	margin: 0 10px;
 }
 .ul-icon>li>a{
 	display: inline-block;
-	margin: 0 10px;
 	height: 20px;
 	width: 20px;
 	border-radius:10px;
